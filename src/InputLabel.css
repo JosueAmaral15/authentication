@@ -1,0 +1,16 @@
+.input-label{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-between;
+    margin:1rem;
+}
+
+.label{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+    text-shadow: 4px 4px 2px gray;
+    font-weight:bold;
+    margin-inline:1rem; 
+    text-align: right;
+}

@@ -1,0 +1,20 @@
+.button{
+    
+    padding:0.5rem 1rem;
+    color:teal;
+    font-weight:bold;
+    font-size: large;
+    font-style: normal;
+    border-radius: 10%;
+    border:none;
+    background-color: lavender;
+}
+
+.button:hover{
+    background-color: aliceblue;
+    color:turquoise;
+}
+
+.button:active{
+    background-color: lavender;
+}
