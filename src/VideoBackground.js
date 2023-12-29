@@ -8,10 +8,17 @@ export default function VideoBackground({ media }) {
 
   useEffect(() => {
     videoRef.current.src = media[count].source;
-    videoRef.current.play();
-    videoTimeOutRef.current = setTimeout(() => {
-      setCount(prevCount => (prevCount + 1) % media.length);
-    }, media[count].duration);
+    let playPromise = videoRef.current.play();
+    if (playPromise !== undefined) {
+        playPromise.then(() => {
+          videoTimeOutRef.current = setTimeout(() => {
+            setCount(prevCount => (prevCount + 1) % media.length);
+          }, media[count].duration);
+        })
+        .catch(error => {
+            clearTimeout(videoTimeOutRef.current);
+        });
+      }
 
     return () => {
       clearTimeout(videoTimeOutRef.current);
