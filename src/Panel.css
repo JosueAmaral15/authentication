@@ -1,6 +1,6 @@
-.intern-panel{
+.extern-panel{
     width:25rem;
-    height:20rem;
+    height:22.5rem;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -12,6 +12,18 @@
     border-radius: 10%;
     position:relative;
     margin: 8.5rem auto;
+}
+
+.intern-panel{
+    width:inherit;
+    height:17rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color:white;
+    position:relative;
+    /*background-color: aquamarine;*/
 }
 
 .fieldset-panel{
@@ -35,3 +47,21 @@
     position:relative;
 }
 
+.complete-login-message{
+    animation: complete-login 8s ease-in-out 0s 1 normal;
+}
+
+@keyframes complete-login{
+    0%{opacity: 0}
+    37%{opacity:1}
+    87%{opacity:1}
+    100%{opacity:0}
+}
+
+.extern-links{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    gap:0.5rem;
+}
